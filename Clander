@@ -1,0 +1,33 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class CalendarQuote {
+
+    public static void main(String[] args) {
+        // Get today's date
+        LocalDate today = LocalDate.now(01-18-2025);
+
+        // Format the date as "Month dd, yyyy"
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
+        String formattedDate = today.format(formatter);
+
+        // Define a list of motivational quotes
+        String[] quotes = {
+                "The only way to do great work is to love what you do.",
+                "Believe you can and you're halfway there.",
+                "The future belongs to those who believe in the beauty of their dreams.",
+                "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+                "The greatest glory in living lies not in never falling, but in rising every time we fall."
+        };
+
+        // Get a random quote from the list
+        int randomIndex = (int) (Math.random() * quotes.length);
+        String quote = quotes[randomIndex];
+
+        // Create the calendar quote string
+        String calendarQuote = formattedDate + "\n" + quote;
+
+        // Print the calendar quote
+        System.out.println(calendarQuote);
+    }
+}
